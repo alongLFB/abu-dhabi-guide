@@ -1,7 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui";
 import { Card, CardContent } from "@/components/ui";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
+  const { messages } = useLanguage();
+
   return (
     <section id="home" className="relative py-20 lg:py-32 overflow-hidden">
       {/* Background gradient */}
@@ -11,23 +16,21 @@ export default function Hero() {
       <div className="relative container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto fade-in">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
-            Abu Dhabi Newcomer Guide
+            {messages.home.title}
           </h1>
           <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-            阿布扎比新手指南
+            {messages.home.subtitle}
           </h2>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Your complete guide to living, working, and studying in Abu Dhabi.
-            From opening bank accounts to finding the best restaurants - we have
-            got you covered.
+            {messages.home.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="px-8 py-4 text-lg">
-              Get Started
+              {messages.home.getStarted}
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-              Learn More
+              {messages.home.learnMore}
             </Button>
           </div>
         </div>
@@ -36,18 +39,18 @@ export default function Hero() {
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <FeatureCard
             icon="🏠"
-            title="Living Guide"
-            description="Essential information for daily life in Abu Dhabi"
+            title={messages.home.features.livingGuide.title}
+            description={messages.home.features.livingGuide.description}
           />
           <FeatureCard
             icon="🛠️"
-            title="Practical Tools"
-            description="Calculators, converters, and interactive utilities"
+            title={messages.home.features.practicalTools.title}
+            description={messages.home.features.practicalTools.description}
           />
           <FeatureCard
             icon="🏛️"
-            title="Tourism Info"
-            description="Must-visit places and cultural insights"
+            title={messages.home.features.tourismInfo.title}
+            description={messages.home.features.tourismInfo.description}
           />
         </div>
       </div>

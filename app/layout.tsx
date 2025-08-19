@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Providers } from "@/components/Providers";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -6,7 +7,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <title>Abu Dhabi Newcomer Guide | 阿布扎比新手指南</title>
         <meta
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           content="Abu Dhabi, UAE, newcomer guide, living guide, expat, student"
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

@@ -1,83 +1,70 @@
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Features() {
+  const { messages } = useLanguage();
+
   return (
     <section id="features" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Everything You Need to Know
+            {messages.features.title}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Comprehensive guides, practical tools, and community support for
-            your life in Abu Dhabi
+            {messages.features.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Living Guide Categories */}
           <FeatureCategory
-            title="Banking & Finance"
+            title={messages.features.banking.title}
             icon="🏦"
-            items={[
-              "Bank account opening",
-              "Payment methods",
-              "Mobile banking",
-              "Financial services",
-            ]}
+            items={messages.features.banking.items}
           />
 
           <FeatureCategory
-            title="Housing & Rent"
+            title={messages.features.housing.title}
             icon="🏠"
             items={[
-              "Rental platforms",
-              "Contract guidance",
-              "Popular areas",
-              "Moving tips",
+              ...messages.features.housing.areas,
+              ...messages.features.housing.process,
             ]}
           />
 
           <FeatureCategory
-            title="Transportation"
+            title={messages.features.transport.title}
             icon="🚌"
             items={[
-              "Public transport",
-              "Hafilat card",
-              "Taxi services",
-              "Car rental",
+              ...messages.features.transport.publicItems,
+              ...messages.features.transport.taxiItems,
             ]}
           />
 
           <FeatureCategory
-            title="Healthcare"
+            title={messages.features.healthcare.title}
             icon="🏥"
             items={[
-              "Medical insurance",
-              "Hospital listings",
-              "Emergency contacts",
-              "Pharmacy locations",
+              ...messages.features.healthcare.insuranceItems,
+              ...messages.features.healthcare.hospitalItems,
             ]}
           />
 
           <FeatureCategory
-            title="Legal & Culture"
+            title={messages.features.legal.title}
             icon="⚖️"
             items={[
-              "Local laws",
-              "Cultural norms",
-              "Dress codes",
-              "Religious guidelines",
+              ...messages.features.legal.lawItems,
+              ...messages.features.legal.culturalItems,
             ]}
           />
 
           <FeatureCategory
-            title="Practical Tools"
+            title={messages.features.tools.title}
             icon="🛠️"
-            items={[
-              "Cost calculator",
-              "Currency converter",
-              "Weather updates",
-              "Visa reminders",
-            ]}
+            items={messages.features.tools.items}
           />
         </div>
       </div>

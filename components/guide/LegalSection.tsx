@@ -1,31 +1,38 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LegalSection() {
+  const { messages } = useLanguage();
+
   return (
     <section id="legal" className="py-8">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            ⚖️ Legal & Cultural Guidelines
+            ⚖️ {messages.features.legal.title}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <h4 className="font-semibold mb-2">Important Laws</h4>
+            <h4 className="font-semibold mb-2">
+              {messages.features.legal.laws}
+            </h4>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Respect local customs and traditions</li>
-              <li>Modest dress code in public areas</li>
-              <li>Zero tolerance for alcohol and driving</li>
-              <li>No public displays of affection</li>
+              {messages.features.legal.lawItems.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-2">Cultural Considerations</h4>
+            <h4 className="font-semibold mb-2">
+              {messages.features.legal.cultural}
+            </h4>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Ramadan observance guidelines</li>
-              <li>Friday as holy day</li>
-              <li>Arabic is the official language</li>
-              <li>Respect for Islamic traditions</li>
+              {messages.features.legal.culturalItems.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
         </CardContent>
