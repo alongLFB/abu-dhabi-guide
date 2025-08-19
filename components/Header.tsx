@@ -17,7 +17,7 @@ export default function Header() {
               <span className="text-white font-bold text-lg">AD</span>
             </div>
             <span className="font-bold text-xl gradient-text">
-              Abu Dhabi Guide
+              {messages.brand}
             </span>
           </div>
         </div>
@@ -75,9 +75,9 @@ function LanguageSwitch() {
   };
 
   return (
-    <div className="hidden sm:flex">
+    <div className="flex">
       <select
-        className="bg-background border border-border rounded-md px-3 py-1 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-desert-gold-500 focus:border-desert-gold-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white [&>option]:bg-background [&>option]:text-foreground dark:[&>option]:bg-gray-800 dark:[&>option]:text-white"
+        className="bg-background border border-border rounded-md px-2 py-1 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-desert-gold-500 focus:border-desert-gold-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white [&>option]:bg-background [&>option]:text-foreground dark:[&>option]:bg-gray-800 dark:[&>option]:text-white"
         value={locale}
         onChange={handleLanguageChange}
       >

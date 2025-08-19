@@ -11,6 +11,7 @@ import React, {
 type Locale = "en" | "zh";
 
 interface Messages {
+  brand: string;
   navigation: {
     home: string;
     livingGuide: string;
@@ -116,6 +117,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 // 导入语言文件
 const messagesEn: Messages = {
+  brand: "Abu Dhabi Guide",
   navigation: {
     home: "Home",
     livingGuide: "Living Guide",
@@ -265,6 +267,7 @@ const messagesEn: Messages = {
 };
 
 const messagesZh: Messages = {
+  brand: "阿布扎比指南",
   navigation: {
     home: "首页",
     livingGuide: "生活指南",
