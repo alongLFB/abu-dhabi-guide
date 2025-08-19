@@ -1,0 +1,97 @@
+{
+  "navigation": {
+    "home": "Home",
+    "livingGuide": "Living Guide",
+    "tools": "Tools",
+    "tourism": "Tourism",
+    "community": "Community",
+    "about": "About"
+  },
+  "home": {
+    "title": "Abu Dhabi Newcomer Guide",
+    "subtitle": "Your complete guide to living, working, and studying in Abu Dhabi",
+    "description": "Comprehensive information and practical tools for newcomers to Abu Dhabi - from opening bank accounts to finding the best restaurants.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": {
+      "livingGuide": {
+        "title": "Living Guide",
+        "description": "Essential information for daily life in Abu Dhabi"
+      },
+      "practicalTools": {
+        "title": "Practical Tools",
+        "description": "Calculators, converters, and interactive utilities"
+      },
+      "tourismInfo": {
+        "title": "Tourism Information",
+        "description": "Must-visit places and cultural insights"
+      }
+    }
+  },
+  "livingGuide": {
+    "title": "Living Guide",
+    "banking": {
+      "title": "Banking & Finance",
+      "description": "How to open bank accounts, payment methods, and financial services"
+    },
+    "mobile": {
+      "title": "Mobile & Internet",
+      "description": "SIM cards, mobile plans, and internet services"
+    },
+    "housing": {
+      "title": "Housing & Rent",
+      "description": "Finding accommodation, rental agreements, and popular areas"
+    },
+    "transportation": {
+      "title": "Transportation",
+      "description": "Public transport, taxis, car rental, and driving requirements"
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "description": "Medical services, insurance, and emergency contacts"
+    },
+    "legal": {
+      "title": "Legal & Culture",
+      "description": "Important laws, cultural norms, and regulations"
+    }
+  },
+  "tools": {
+    "title": "Practical Tools",
+    "costCalculator": {
+      "title": "Cost of Living Calculator",
+      "description": "Estimate your monthly expenses in Abu Dhabi"
+    },
+    "currencyConverter": {
+      "title": "Currency Converter",
+      "description": "Convert AED to your home currency"
+    },
+    "weather": {
+      "title": "Weather & Air Quality",
+      "description": "Real-time weather information"
+    },
+    "visaReminder": {
+      "title": "Visa Reminder",
+      "description": "Never miss your visa renewal date"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
